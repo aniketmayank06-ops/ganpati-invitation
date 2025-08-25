@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ganpati Invitation • Aniket Gaikwad</title>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --gold:#d4af37;
+    --saffron:#ff7a00;
+    --cream:#fff7e6;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;
+    font-family:Poppins, sans-serif;
+    color:#fff;
+
+    /* 🔥 Background image */
+    background:url("https://temple.yatradham.org/public/Product/puja-rituals/puja-rituals_hFtJZrdH_202410241519040.jpg") no-repeat center center fixed;
+    background-size:cover;
+
+    overflow-x:hidden;
+  }
+
+  /* Floating flowers */
+  .petal{
+    position:fixed; top:-40px; font-size:22px; opacity:.9; z-index:0;
+    animation: fall linear forwards;
+  }
+  @keyframes fall{
+    to{ transform: translateY(110vh) rotate(360deg); opacity:.95;}
+  }
+
+  .container{
+    position:relative; z-index:1; padding:20px 14px; min-height:100dvh;
+    display:grid; place-items:center;
+  }
+
+  .card{
+    width:min(820px, 94vw);
+    border:5px solid var(--gold);
+    border-radius:26px;
+    box-shadow:0 0 30px #0008, 0 0 22px #ffb23a40 inset;
+    padding:28px 22px 26px;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+    background:rgba(0,0,0,0.65);
+  }
+
+  /* Decorative corners */
+  .corner{
+    position:absolute; width:70px; height:70px; border-color:var(--gold); opacity:.9;
+  }
+  .c1{left:10px; top:10px; border-left:4px solid var(--gold); border-top:4px solid var(--gold);}
+  .c2{right:10px; top:10px; border-right:4px solid var(--gold); border-top:4px solid var(--gold);}
+  .c3{left:10px; bottom:10px; border-left:4px solid var(--gold); border-bottom:4px solid var(--gold);}
+  .c4{right:10px; bottom:10px; border-right:4px solid var(--gold); border-bottom:4px solid var(--gold);}
+
+  h1{
+    margin:8px 0 4px; font-family:"Great Vibes", cursive;
+    font-size:clamp(34px, 6vw, 56px); color:#ffd96b;
+    text-shadow:0 0 10px #ffbe3a, 0 0 22px #ff7a00aa;
+  }
+  .shloka{
+    font-weight:600; color:#ffcf8a; letter-spacing:.6px;
+    margin:2px 0 10px;
+  }
+
+  /* Ganesha */
+  .ganesha{
+    width:min(240px, 55vw); border-radius:16px;
+    box-shadow:0 12px 26px #0008;
+  }
+
+  .divider{ margin:16px auto; font-size:22px; color:#ffc66d}
+  .details{
+    color:#ffe9c7; line-height:1.9; font-size:clamp(15px, 2.6vw, 18px);
+    margin: 8px auto 6px;
+  }
+  .badge{
+    display:inline-block; background: #3a2410; color:#ffd580;
+    border:1px solid #ffcc66; padding:6px 12px; border-radius:999px; margin:6px 6px 2px;
+  }
+
+  .address{
+    margin:14px auto 8px; padding:14px 12px; max-width:640px;
+    background:#fff3e0; color:#3a210a; border:2px dashed #ffb23a; border-radius:14px;
+  }
+
+  iframe{
+    width:100%; height:300px; border:3px solid var(--gold); border-radius:14px; margin-top:12px;
+  }
+
+  .cta{
+    display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin:16px 0 6px;
+  }
+  .btn{
+    cursor:pointer; border:none; border-radius:999px; padding:12px 18px; font-weight:700;
+    box-shadow:0 8px 18px #0006; transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover{ transform: translateY(-2px); box-shadow:0 10px 22px #0007}
+  .primary{ background:linear-gradient(90deg, #ff9800, #ffc107); color:#3a210a}
+  .ghost{ background:transparent; color:#ffd580; border:2px solid #ffd580}
+
+  /* Reveal effect */
+  .reveal{opacity:0; transform: translateY(20px); filter: blur(2px);}
+  .show{opacity:1; transform: translateY(0); filter: blur(0); transition:.9s ease;}
+</style>
+</head>
+<body>
+
+<!-- Falling petals -->
+<div id="petals"></div>
+
+<div class="container">
+  <div class="card">
+    <div class="corner c1"></div>
+    <div class="corner c2"></div>
+    <div class="corner c3"></div>
+    <div class="corner c4"></div>
+
+    <h1 class="reveal">🙏 Ganesh Chaturthi Invitation 🙏</h1>
+    <p class="shloka reveal">|| Shree Ganeshaya Namah ||</p>
+
+    <img class="ganesha reveal" src="https://i.pinimg.com/236x/ef/57/be/ef57becb0b81fc8901ae7874de2041c5.jpg" alt="Ganpati">
+
+    <div class="divider reveal">🌸🌸🌸</div>
+
+    <p class="details reveal">
+      With the blessings of Lord Ganesha,<br><br>
+      We warmly invite you and your family to join us for<br>
+      <b>Ganesh Chaturthi Celebration 2024</b><br><br>
+      <span class="badge">📅 Start: 27th August 2024</span>
+      <span class="badge">📅 End: 31st August 2024</span><br>
+      <span class="badge">🕒 Time: 1:00 PM Onwards</span><br><br>
+      The Ganpati will be with us for <b>5 days</b>.<br>
+      Your presence will make the occasion more auspicious.
+    </p>
+
+    <div class="address reveal">
+      📍 Ramdas Bhoir Chawl No. 1, Room No. 1,<br>
+      G65, Opp. Rupesh Bhoir Home,<br>
+      Mahadhu Bhiva Nagar, Manera Gaon,<br>
+      Morya Nagri, Ulhasnagar (4), 421004
+    </div>
+
+    <iframe class="reveal"
+      src="https://www.google.com/maps?q=19.20731207363098,73.15570461269887&hl=en&z=16&output=embed"
+      allowfullscreen>
+    </iframe>
+
+    <div class="cta reveal">
+      <button class="btn primary">Save the Date</button>
+      <button class="btn ghost">Join the Celebration</button>
+      <a class="btn ghost" href="https://wa.me/917498555519?text=Ganpati%20Invitation%20🎉%0ADate:%2027%20Aug%202024%20to%2031%20Aug%202024%0ATime:%201:00%20PM%20onwards%0ABy:%20Aniket%20Gaikwad%0AAddress:%20Ramdas%20Bhoir%20Chawl%20No.1%2C%20Room%20No.1%2C%20Ulhasnagar(4)%20421004%0AMap:%20https://www.google.com/maps?q=19.20731207363098,73.15570461269887" target="_blank">WhatsApp</a>
+      <a class="btn ghost" href="tel:+917498555519">Call</a>
+    </div>
+
+    <p class="reveal" style="margin-top:20px;"><b>- Invited by Aniket Gaikwad</b></p>
+  </div>
+</div>
+
+<script>
+  // Falling petals
+  function createPetal(){
+    const petal=document.createElement("div");
+    petal.classList.add("petal");
+    petal.innerText="🌸";
+    petal.style.left=Math.random()*100+"vw";
+    petal.style.animationDuration= 5+Math.random()*5 +"s";
+    document.body.appendChild(petal);
+    setTimeout(()=>{petal.remove();},10000);
+  }
+  setInterval(createPetal,500);
+
+  // Reveal effect
+  const observer=new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){ entry.target.classList.add("show"); }
+    });
+  }, {threshold:0.2});
+  document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>
